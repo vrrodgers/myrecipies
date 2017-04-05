@@ -41,11 +41,13 @@ $navbar-default-bg: #626d77;
   color: #fff;
   text-decoration: none;
 }
-.panel-footer{
+.panel-footer {
   background-color: #626d77;
   position: absolute;
-  clear: both;
+  /*bottom: 0;*/
   width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
 .description{
   margin-top: 0;

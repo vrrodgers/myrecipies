@@ -43,7 +43,6 @@ class RecipesController < ApplicationController
   private
     
     def set_recipe
-      #made a method to remove @recipe 
       @recipe = Recipe.find(params[:id])
     end
     
