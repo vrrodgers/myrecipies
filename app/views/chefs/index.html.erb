@@ -16,7 +16,8 @@
         <div class="well col-md-4 col-md-offset">
           <li class="chef-title"><%= link_to chef.chefname.capitalize, chef_path(chef) %></li>
           <li><small><%= pluralize(chef.recipes.count, "recipe") if chef.recipes %></small></li>
-
+          <li><%= link_to "Delete this chef", chef_path(chef), method: :delete,
+            data: {confirm: "Are you sure you want to delete the chef and all associate recipes?"} %></li>
         </div>
       </div>
     </ul>
