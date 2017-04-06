@@ -1,4 +1,32 @@
 <%= render 'shared/page_title', title: "showing all recipes" %>
+<ul class="nav nav-tabs">
+  <li class='active'>
+    <%= link_to "Recipes", recipes_path %>
+  </li>
+  <li>
+    <%= link_to "Chefs", chefs_path %>
+  </li>
+</ul>
 
-
-<% render 'recipe', obj: @recipes %>
+<div align= "center">
+  <%= will_paginate %>
+</div>  
+<% @recipes.each do |recipe| %>
+  <div class="row">
+    <div class = "col-md-2">
+      <section class= "center">
+        
+      </section>
+    </div>
+    <div class= "col-md-8 well">  
+      <h4><%= link_to recipe.name, recipe_path(recipe) %></h4>
+      <p><%= truncate(recipe.description, length: 150)%></p>
+      <p>
+        <span class="quiet"><small>Created<%= time_ago_in_words(recipe.created_at) %> ago</small>
+      </p>
+    </div>    
+  </div>  
+<% end %>
+<div align= "center">
+  <%= will_paginate %>
+</div>  
