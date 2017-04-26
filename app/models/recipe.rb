@@ -1,4 +1,7 @@
 class Recipe < ApplicationRecord
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  
   belongs_to :chef
   validates :name, presence: true
   validates :description, presence: true, length: {minimum: 5, maximum: 500}

@@ -52,7 +52,7 @@ class ChefsController < ApplicationController
   private
 
   def set_chef
-    @chef = Chef.find(params[:id])
+    @chef = Chef.friendly.find(params[:id])
   end
 
   def chef_params
