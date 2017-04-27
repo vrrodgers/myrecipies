@@ -1,4 +1,9 @@
 <%= render 'shared/page_title', title: @recipe.name %>
+<div class= "col-md-4">
+</div>
+<div class= "col-md-8">
+  <%= image_tag recipes_img(@recipe.image), width: '40%' %>
+</div>
 <hr />
 <div class= "well col-md-8 col-md-offset-2">
   <h4 class= "center description"><strong>Steps: </strong></h4>

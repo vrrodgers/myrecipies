@@ -1,4 +1,6 @@
 class Recipe < ApplicationRecord
+  mount_uploader :image, RecipeUploader
+
   extend FriendlyId
   friendly_id :name, use: :slugged
   
